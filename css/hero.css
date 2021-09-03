@@ -1,0 +1,68 @@
+.hero {
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.hero__title {
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 80px;
+  font-family: var(--playfair-display);
+  color: var(--color-dark-blue);
+}
+
+.hero__paragraph {
+  padding-top: 10px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  font-family: var(--inter);
+}
+
+.hero__line {
+  border-radius: 4px;
+  margin: 21px 0px 48px 0px;
+  width: 2em;
+  height: 2px;
+  background-color: var(--color-dark-blue);
+}
+
+.hero__explore {
+  box-sizing: border-box;
+  width: 500px;
+}
+
+.hero__illustration {
+  position: absolute;
+  top: 25%;
+  right: 105px;
+  z-index: -1;
+}
+
+.hero__explore-select {
+  font-family: var(--inter);
+  padding-left: 31px;
+  padding-right: 31px;
+  width: 220px;
+  height: 52px;
+  margin: 15px 15px 15px 0;
+  border: 0.8px solid var(--color-grey);
+  border-radius: 6px;
+  color: var(--color-dark-gray);
+  background-color: #fff;
+}
+
+.hero__button {
+  font-family: var(--inter);
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 35px;
+  width: 180px;
+  height: 52px;
+  background-color: var(--color-orange);
+  color: #fff;
+  border: 1px solid var(--color-orange);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}

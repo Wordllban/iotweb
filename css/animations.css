@@ -1,0 +1,18 @@
+.header__nav-item a:hover {
+  opacity: 1;
+}
+
+.header__button:hover {
+  background-color: var(--color-orange);
+  color: #fff;
+}
+
+.hero__button:hover {
+  background-color: #fff;
+  color: var(--color-orange);
+}
+
+.intro__button:hover {
+  background-color: #fff;
+  color: var(--color-orange);
+}
