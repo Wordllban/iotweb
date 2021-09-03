@@ -1,7 +1,7 @@
 @import "./normalize.min.css";
 
-@import "_colors.css";
-@import "_fonts.css";
+@import "./_colors.css";
+@import "./_fonts.css";
 
 @import "./globals.css";
 @import "./header.css";
