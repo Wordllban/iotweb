@@ -5,7 +5,7 @@ Simple landing page made with pure HTML/CSS/JS and responsive by student of "Int
 ---
 
 ## Design
-![Figma]https://www.figma.com/file/XHYmp9yKTxcOQD5zFAbKQH/LabWork1-V2?node-id=0%3A1
+https://www.figma.com/file/XHYmp9yKTxcOQD5zFAbKQH/LabWork1-V2?node-id=0%3A1
 
 ---
 
