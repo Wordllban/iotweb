@@ -1,6 +1,6 @@
 @import "./normalize.min.css";
-@import "./../typography/_colors.css";
-@import "./../typography/_fonts.css";
+@import "./../typography/colors.css";
+@import "./../typography/fonts.css";
 
 @import "./globals.css";
 @import "./header.css";
