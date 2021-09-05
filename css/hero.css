@@ -1,6 +1,6 @@
 .hero {
   overflow: hidden;
-  margin-bottom: 4rem;
+  margin-bottom: 175px;
 }
 
 .hero__title {
@@ -33,7 +33,7 @@
 
 .hero__illustration {
   position: absolute;
-  top: 25%;
+  top: 15%;
   right: 105px;
   z-index: -1;
 }
@@ -67,9 +67,19 @@
 }
 
 @media screen and (min-width: 2560px) {
+  .hero__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hero__explore-select {
+    box-sizing: border-box;
+    width: 45%;
+  }
   .hero__illustration {
-    top: 10%;
-    right: 25%;
+    position: relative;
+    display: flex;
+    right: 0;
   }
 }
 
@@ -77,6 +87,10 @@
   .hero__illustration {
     top: 20%;
     right: 0px;
+  }
+
+  .hero {
+    margin-bottom: 6rem;
   }
 }
 
