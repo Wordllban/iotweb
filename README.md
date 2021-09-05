@@ -1,7 +1,7 @@
 # Lab 1 - Landing page with pure HTML/CSS
 Simple landing page made with pure HTML/CSS/JS by student of "Internet of Things" program in Lviv Polytechnic National University.
 ![Landing screenshot](https://github.com/Wordllban/iotweb/blob/lab-1/readme-images/landing-screenshot.png)
-# [DEMO](https://wordllban.github.io/iotweb/)
+# [DEMO](https://wordllban.github.io/iotweb/) - ###If it is broken - it's github pages' problem
 ---
 
 ## Design
