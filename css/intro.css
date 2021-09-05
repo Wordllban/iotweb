@@ -42,6 +42,10 @@
   justify-content: center;
 }
 
+.intro__illustration {
+  animation: floating 3s linear infinite;
+}
+
 .intro__illustration img {
   width: 90%;
 }

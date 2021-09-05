@@ -16,3 +16,18 @@
   background-color: #fff;
   color: var(--color-orange);
 }
+
+@keyframes floating {
+  0% {
+    transform: translateY(20px);
+  }
+
+  50% {
+    transform: translateY(0px);
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateY(20px);
+  }
+}
