@@ -99,6 +99,10 @@
     margin-bottom: 1rem;
   }
 
+  .hero__title {
+    margin-top: 60px;
+  }
+
   .hero__explore {
     margin: 0 auto;
     box-sizing: border-box;
@@ -119,6 +123,12 @@
   }
 }
 
+@media screen and (max-width: 450px) {
+  .hero__illustration {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .hero__title {
     margin-top: 1.1em;
@@ -127,9 +137,5 @@
 
   .hero__paragraph {
     margin-top: 5px;
-  }
-
-  .hero__illustration {
-    display: none;
   }
 }
