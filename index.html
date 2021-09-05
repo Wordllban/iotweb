@@ -24,31 +24,36 @@
 
     <link rel="stylesheet" href="css/normalize.min.css" />
 
-    <link rel="stylesheet" href="iotweb/css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <section class="hero">
-      <div class="container">
+    <section class="hero container">
+      <div>
         <header class="header">
           <div class="header__container">
-            <img class="header__logo" src="images/logo.svg" alt="logo" />
+            <div class="header__menu" onclick="toggleMenu()">
+              <img src="images/hamburger_icon.svg" alt="Menu icon" />
+            </div>
 
-            <nav class="header__nav">
+            <div>
+              <img class="header__logo" src="images/logo.svg" alt="logo" />
+            </div>
+
+            <nav id="nav-links" class="header__nav">
               <ul>
                 <li class="header__nav-item"><a href="#">Home</a></li>
                 <li class="header__nav-item"><a href="#">Destinations</a></li>
                 <li class="header__nav-item"><a href="#">About</a></li>
                 <li class="header__nav-item"><a href="#">Partner</a></li>
               </ul>
+              <button class="header__button">Login</button>
+              <button class="header__button">Register</button>
             </nav>
-
-            <button class="header__button">Login</button>
-            <button class="header__button">Register</button>
           </div>
         </header>
       </div>
 
-      <div class="container hero">
+      <div class="hero">
         <h1 class="hero__title">Explore and <br />Travel</h1>
         <p class="hero__paragraph">Holiday finder</p>
         <hr class="hero__line" />
@@ -76,11 +81,7 @@
     <section class="intro">
       <div class="container intro__container">
         <div class="intro__illustration">
-          <img
-            src="./images/illustration_2.svg"
-            width="120%"
-            alt="Content's illustration"
-          />
+          <img src="./images/illustration_2.svg" alt="Content's illustration" />
         </div>
 
         <div class="intro__content">
@@ -99,7 +100,7 @@
       <div class="container">
         <div class="features__title">
           <h2>Featured destinations</h2>
-          <p>View all ></p>
+          <a href="№">View all ></a>
         </div>
         <div class="features__list">
           <div class="features__item">
@@ -129,6 +130,7 @@
             </div>
           </div>
         </div>
+        <button class="features__view-all">View All</button>
       </div>
     </section>
 
@@ -158,5 +160,6 @@
         </div>
       </div>
     </section>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,13 +1,13 @@
 .intro {
   background-color: #f8f8f8;
   padding-top: 60px;
-  padding-bottom: 220px;
+  padding-bottom: 70px;
 }
 
 .intro__title {
   color: #000;
   font-family: var(--playfair-display);
-  font-size: 36px;
+  font-size: 2.25rem;
   line-height: 50px;
   width: 480px;
 }
@@ -17,15 +17,15 @@
   width: 450px;
   height: 120px;
   font-weight: 300;
-  font-size: 17px;
-  line-height: 30px;
+  font-size: var(--font-size-md);
+  line-height: 1.875rem;
   font-family: var(--mulish);
 }
 
 .intro__button {
   font-family: var(--inter);
   font-weight: 600;
-  font-size: 16px;
+  font-size: var(--font-size-md);
   height: 48px;
   padding: 6px 39px;
   background-color: var(--color-orange);
@@ -39,8 +39,35 @@
 .intro__container {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.intro__illustration {
-  padding-right: 200px;
+.intro__illustration img {
+  width: 90%;
+}
+
+@media screen and (max-width: 768px) {
+  .intro {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  .intro__illustration {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .intro__title {
+    width: 320px;
+  }
+
+  .intro__paragraph {
+    width: 320px;
+  }
+
+  .intro__button {
+    width: 180px;
+    height: 52px;
+  }
 }

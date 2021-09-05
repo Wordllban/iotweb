@@ -1,21 +1,20 @@
 .hero {
   overflow: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 4rem;
 }
 
 .hero__title {
   font-weight: bold;
-  font-size: 64px;
-  line-height: 80px;
+  font-size: 4rem;
+  line-height: 5rem;
   font-family: var(--playfair-display);
   color: var(--color-dark-blue);
 }
 
 .hero__paragraph {
-  padding-top: 10px;
   font-weight: 600;
-  font-size: 22px;
-  line-height: 27px;
+  font-size: 1.375rem;
+  line-height: 1.685rem;
   font-family: var(--inter);
 }
 
@@ -29,7 +28,7 @@
 
 .hero__explore {
   box-sizing: border-box;
-  width: 500px;
+  width: 50%;
 }
 
 .hero__illustration {
@@ -54,7 +53,7 @@
 
 .hero__button {
   font-family: var(--inter);
-  font-size: 15px;
+  font-size: var(--font-size-md);
   font-weight: bold;
   margin-top: 35px;
   width: 180px;
@@ -65,4 +64,58 @@
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
+}
+
+@media screen and (min-width: 2560px) {
+  .hero__illustration {
+    top: 10%;
+    right: 25%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hero__illustration {
+    top: 20%;
+    right: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    margin-bottom: 1rem;
+  }
+
+  .hero__explore {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 75%;
+  }
+
+  .hero__line {
+    display: none;
+  }
+
+  .hero__button {
+    margin-top: 14px;
+  }
+
+  .hero__illustration {
+    position: inherit;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .hero__title {
+    margin-top: 1.1em;
+    margin-bottom: 0.5em;
+  }
+
+  .hero__paragraph {
+    margin-top: 5px;
+  }
+
+  .hero__illustration {
+    display: none;
+  }
 }
