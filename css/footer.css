@@ -22,9 +22,9 @@
   margin-top: 30px;
 }
 
-.footer__media__link {
-  width: 16px;
-  height: 16px;
+.footer__media__link img {
+  width: 32px;
+  height: 32px;
 }
 
 .footer__media__link:not(:first-child) {
