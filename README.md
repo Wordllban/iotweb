@@ -2,6 +2,7 @@
 Simple and responsive landing page made with pure HTML/CSS/JS by student of "Internet of Things" program in Lviv Polytechnic National University.
 ![Landing screenshot](https://github.com/Wordllban/iotweb/blob/lab-1/readme-images/landing-screenshot.png)
 
+# [DEMO](https://wordllban.github.io/iotweb/)
 ---
 
 ## Design
