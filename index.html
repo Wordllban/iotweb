@@ -27,8 +27,8 @@
               <input type="text" id="title_input" />
             </p>
             <p>
-              <label for="description">Description</label>
-              <input type="text" id="description_input" />
+              <label for="price">Price</label>
+              <input type="text" id="price_input" />
             </p>
 
             <button class="form__create-button" id="submit_button">
@@ -48,11 +48,15 @@
             >
               Cancel
             </button>
+
+            <button class="sort_button" id="sort_items">Sort by price</button>
           </fieldset>
         </form>
       </div>
 
-      <ul id="items_container" class="items_container"></ul>
+      <div class="items_list">
+        <ul id="items_container" class="items_container"></ul>
+      </div>
 
       <div class="delete-container">
         <div>

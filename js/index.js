@@ -2,7 +2,7 @@ import {
     addItemToPage,
     clearInputs,
     renderItemsList,
-    getInputValues
+    getInputValues,
 } from "./dom_util.js";
 
 const submitButton = document.getElementById("submit_button");
@@ -10,16 +10,25 @@ const findButton = document.getElementById("find_button");
 const cancelFindButton = document.getElementById("cancel_find_button");
 const findInput = document.getElementById("find_input");
 const itemsCounter = document.getElementById("items_counter");
+const itemsSort = document.getElementById("sort_items");
 
 let devices = [];
 
-const addItem = ({ title, desc }) => {
+itemsSort.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    devices.sort((a, b) => (a.price < b.price) ? 1 : -1);
+
+    renderItemsList(devices);
+});
+
+const addItem = ({ title, price }) => {
     const generatedId = () => Math.random().toString(36).substr(2, 9);
 
     const newItem = {
         id: generatedId,
         title,
-        desc,
+        price,
     };
 
     devices.push(newItem);
@@ -31,14 +40,15 @@ submitButton.addEventListener("click", (event) => {
     // Prevents default page reload on submit
     event.preventDefault();
 
-    const { title, description } = getInputValues();
+    const { title, price } = getInputValues();
 
     clearInputs();
 
     addItem({
         title,
-        desc: description,
+        price: price,
     });
+
 });
 
 findButton.addEventListener("click", (event) => {
