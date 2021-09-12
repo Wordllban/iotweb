@@ -4,162 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thousand Sunnny</title>
+    <title>Lab-3</title>
 
-    <!--Playfair Display font-->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
-      rel="stylesheet"
-    />
     <!--Inter font-->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Playfair+Display&display=swap"
       rel="stylesheet"
     />
-    <!--Mulish font-->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="css/normalize.min.css" />
-
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <section class="hero container">
-      <div>
-        <header class="header">
-          <div class="header__container">
-            <div class="header__menu" onclick="toggleMenu()">
-              <img src="images/hamburger_icon.svg" alt="Menu icon" />
-            </div>
+    <header class="header container">
+      <h1 class="header__name">Microcontrollers</h1>
+    </header>
+    <section class="content container">
+      <div class="content__form">
+        <form>
+          <fieldset class="form__create">
+            <legend>Create device</legend>
+            <p>
+              <label for="name">Model</label>
+              <input type="text" id="title_input" />
+            </p>
+            <p>
+              <label for="description">Description</label>
+              <input type="text" id="description_input"/>
+            </p>
 
-            <div class="header__logo">
-              <img src="images/logo.svg" alt="logo" />
-            </div>
+            <button class="form__create-button" id="submit_button">Submit</button>
+          </fieldset>
 
-            <nav id="nav-links" class="header__nav">
-              <ul>
-                <li class="header__nav-item"><a href="#">Home</a></li>
-                <li class="header__nav-item"><a href="#">Destinations</a></li>
-                <li class="header__nav-item"><a href="#">About</a></li>
-                <li class="header__nav-item"><a href="#">Partner</a></li>
-              </ul>
-              <button class="header__button">Login</button>
-              <button class="header__button">Register</button>
-            </nav>
+          <fieldset class="form__find">
+            <legend>Find Device</legend>
+            <p>Total amount:</p>
+            <p><input type="text" id="find_input"/></p>
+            <button class="form__find-button" id="find_button">Find</button>
+            <button class="form__find-button-cancel" id="cancel_button">Cancel</button>
+          </fieldset>
+        </form>
+      </div>
+
+      <ul id="items_container" class="items_container"></ul>
+
+      <div class="delete-container">
+        <div>
+          <div class="delete-container__title">
+            <img src="./assets/basket.svg" height="50" alt="basket" />
+            <p>Drop here to delete</p>
           </div>
-        </header>
-      </div>
-
-      <div class="hero__content">
-        <div class="hero__explore">
-          <h1 class="hero__title">Explore and <br />Travel</h1>
-          <p class="hero__paragraph">Holiday finder</p>
-          <hr class="hero__line" />
-          <select class="hero__explore-select">
-            <option selected disabled hidden>Location</option>
-          </select>
-          <select class="hero__explore-select">
-            <option selected disabled hidden>Activity</option>
-          </select>
-          <select class="hero__explore-select">
-            <option selected disabled hidden>Grade</option>
-          </select>
-          <select class="hero__explore-select">
-            <option selected disabled hidden>Date</option>
-          </select>
-
-          <button class="hero__button">Explore</button>
-        </div>
-        <div class="hero__illustration">
-          <img src="./images/illustration_1.svg" alt="Hero image" />
-        </div>
-      </div>
-    </section>
-    <section class="intro">
-      <div class="container intro__container">
-        <div class="intro__illustration">
-          <img src="./images/illustration_2.svg" alt="Content's illustration" />
-        </div>
-
-        <div class="intro__content">
-          <h2 class="intro__title">A new way to explore the world</h2>
-          <p class="intro__paragraph">
-            For decades travellers have reached for Lonely Planet books when
-            looking to plan and execute their perfect trip, but now, they can
-            also let Lonely Planet Experiences lead the way
-          </p>
-          <button class="intro__button">Learn more</button>
         </div>
       </div>
     </section>
 
-    <section class="features">
-      <div class="container">
-        <div class="features__title">
-          <h2>Featured destinations</h2>
-          <a href="№">View all ></a>
-        </div>
-        <div class="features__list">
-          <div class="features__item">
-            <img src="./images/feature_1.svg" alt="Feature 1" />
-            <div class="features__item-title">
-              <strong>Raja Ampat</strong><br /><span>Indonesia</span>
-            </div>
-          </div>
-          <div class="features__item">
-            <img src="./images/feature_2.svg" alt="Feature 2" />
-            <div class="features__item-title">
-              <strong>Fanjingshan</strong><br /><span>China</span>
-            </div>
-          </div>
-          <div class="features__item">
-            <img src="./images/feature_3.svg" alt="Feature 3" />
-            <div class="features__item-title">
-              <strong>Vevey</strong><br /><span>Switzerland</span>
-            </div>
-          </div>
-          <div class="features__item">
-            <img src="./images/feature_4.svg" alt="Feature 4" />
-            <div class="features__item-title">
-              <strong>Skadar</strong>
-              <br />
-              <span>Montenegro</span>
-            </div>
-          </div>
-        </div>
-        <button class="features__view-all">View All</button>
-      </div>
-    </section>
-
-    <section class="footer">
-      <div class="container">
-        <div class="footer__credits">
-          <img src="./images/logo.svg" alt="Logo" />
-          <p>©2020 Thousand Sunny. All rights reserved</p>
-        </div>
-        <hr />
-        <div class="footer__media">
-          <div class="footer__media__link">
-            <img src="images/logo_twitter.svg" alt="Twitter logo" />
-          </div>
-          <div class="footer__media__link">
-            <img src="images/logo_facebook.svg" alt="Facebook logo" />
-          </div>
-          <div class="footer__media__link">
-            <img src="images/logo_instagram.svg" alt="Instagram logo" />
-          </div>
-          <div class="footer__media__link">
-            <img src="images/logo_linkedin.svg" alt="Linkedin logo" />
-          </div>
-          <div class="footer__media__link">
-            <img src="images/logo_youtube.svg" alt="Youtube logo" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <script src="js/main.js"></script>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>

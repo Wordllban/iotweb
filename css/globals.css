@@ -1,7 +1,6 @@
-@import "../typography/colors.css";
-@import "../typography/fonts.css";
-@import "./animations.css";
-@import "./intro.css";
+body {
+  font-family: var(--inter);
+}
 
 .container {
   margin: 0 auto;
@@ -9,45 +8,38 @@
   width: 100%;
 }
 
-@media screen and (min-width: 2560px) {
-  .container {
-    max-width: 1100px;
-  }
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@media screen and (max-width: 1024px) {
-  .container {
-    max-width: 984px;
-  }
+fieldset {
+  border: none;
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    text-align: center;
-  }
-
-  .container {
-    max-width: 730px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  :root {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .container {
-    max-width: 300px;
-  }
-}
-
-a {
-  text-decoration: none;
-  color: var(--dark-blue);
-}
-
-li {
+label,
+input {
   display: block;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+label {
+  padding-bottom: 1rem;
+}
+
+input {
+  border: 2px solid rgba(26, 106, 138, 0.4);
+  border-radius: 3px;
+  font-weight: 400;
+}
+
+legend {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+button {
+  font-weight: 500;
 }

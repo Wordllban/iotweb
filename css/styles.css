@@ -1,9 +1,6 @@
-@import "./normalize.min.css";
-@import "./../typography/colors.css";
-@import "./../typography/fonts.css";
-
 @import "./globals.css";
 @import "./header.css";
-@import "./hero.css";
-@import "./features.css";
-@import "./footer.css";
+@import "./form.css";
+@import "./content.css";
+@import "./delete.css";
+@import "../typography/fonts.css";

@@ -1,0 +1,23 @@
+.delete-container {
+  height: 70vh;
+  width: 20vw;
+  border: 1px solid rgb(255, 53, 53);
+  border-radius: 16px;
+  background: rgba(255, 53, 53, 0.3);
+  border-radius: 1rem;
+}
+
+.delete-container > div:first-child {
+  padding: 1.25rem;
+  height: 55vh;
+}
+
+.delete-container__title {
+  text-align: center;
+  margin: 25vh 0;
+}
+.delete-container__title p {
+  font-size: var(--font-size-md);
+  font-weight: bold;
+  color: white;
+}
