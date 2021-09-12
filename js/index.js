@@ -9,6 +9,7 @@ const submitButton = document.getElementById("submit_button");
 const findButton = document.getElementById("find_button");
 const cancelFindButton = document.getElementById("cancel_find_button");
 const findInput = document.getElementById("find_input");
+const itemsCounter = document.getElementById("items_counter");
 
 let devices = [];
 
@@ -45,6 +46,8 @@ findButton.addEventListener("click", (event) => {
     const foundDevices = devices
         .filter(d => d.title.search(findInput.value) !== -1);
     
+    itemsCounter.innerHTML = `${foundDevices.length}`;
+
     renderItemsList(foundDevices);
 });
 
@@ -53,6 +56,7 @@ cancelFindButton.addEventListener("click", (event) => {
 
     renderItemsList(devices);
 
+    itemsCounter.innerHTML = "";
     findInput.value = "";
 });
 
