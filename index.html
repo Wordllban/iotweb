@@ -38,7 +38,7 @@
 
           <fieldset class="form__find">
             <legend>Find Device</legend>
-            <p>Items found: <span id="items_counter"></span></p>
+            <p>Items found: <span id="items_counter"> all </span></p>
             <p><input type="text" id="find_input" /></p>
             <button class="form__find-button" id="find_button">Find</button>
             <button
@@ -48,8 +48,13 @@
             >
               Cancel
             </button>
-
-            <button class="sort_button" id="sort_items">Sort by price</button>
+            <br>
+            <button class="sort_button" id="sort_items_asc">
+              Lower price
+            </button>
+            <button class="sort_button" id="sort_items_desc">
+              Higher price
+            </button>
           </fieldset>
         </form>
       </div>

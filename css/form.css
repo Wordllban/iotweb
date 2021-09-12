@@ -14,7 +14,7 @@
 }
 
 .form__find-button {
-  width: 4em;
+  width: 8em;
   font-size: var(--font-size-md);
   padding: 0.6rem 0;
   border: none;
@@ -24,7 +24,7 @@
 }
 
 .form__find-button-cancel {
-  width: 6em;
+  width: 8em;
   font-size: var(--font-size-md);
   padding: 0.6rem 0;
   border: none;

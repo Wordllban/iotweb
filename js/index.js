@@ -10,11 +10,20 @@ const findButton = document.getElementById("find_button");
 const cancelFindButton = document.getElementById("cancel_find_button");
 const findInput = document.getElementById("find_input");
 const itemsCounter = document.getElementById("items_counter");
-const itemsSort = document.getElementById("sort_items");
+const itemsSortASC = document.getElementById("sort_items_asc");
+const itemsSortDESC = document.getElementById("sort_items_desc");
 
 let devices = [];
 
-itemsSort.addEventListener("click", (event) => {
+itemsSortASC.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    devices.sort((a, b) => (a.price > b.price) ? 1 : -1);
+
+    renderItemsList(devices);
+});
+
+itemsSortDESC.addEventListener("click", (event) => {
     event.preventDefault();
 
     devices.sort((a, b) => (a.price < b.price) ? 1 : -1);
@@ -66,7 +75,7 @@ cancelFindButton.addEventListener("click", (event) => {
 
     renderItemsList(devices);
 
-    itemsCounter.innerHTML = "";
+    itemsCounter.innerHTML = `${devices.length}`;
     findInput.value = "";
 });
 
