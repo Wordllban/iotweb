@@ -8,12 +8,6 @@ body {
   width: 100%;
 }
 
-.content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 fieldset {
   border: none;
 }
@@ -26,7 +20,7 @@ input {
 }
 
 label {
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 input {
@@ -42,4 +36,8 @@ legend {
 
 button {
   font-weight: 500;
+}
+
+li {
+  display: block;
 }
