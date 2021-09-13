@@ -1,5 +1,5 @@
-# Lab-4 - CRUD Javascript App: View Page
-Visual presentation for CRUD implementation with vanilla JavaScript by student of "Internet of Things" program in Lviv Polytechnic National University.
+# Lab-4 - CRUD Javascript App
+Visual presentation for CRUD implementation(inputs validation enabled) with vanilla JavaScript by student of "Internet of Things" program in Lviv Polytechnic National University.
 
 ---
 
