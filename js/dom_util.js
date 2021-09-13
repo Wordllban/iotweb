@@ -3,10 +3,10 @@
 const titleInput = document.getElementById("title_input");
 const priceInput = document.getElementById("price_input");
 const itemsContainer = document.getElementById("items_container");
-const itemPrice = document.getElementsByClassName("card-paragraph");
 
 // local functions 
 const getItemId = (id) => `item-${id}`;
+const getItemEdit = (id) => `edit-${id}`;
 
 const itemTemplate = ({ id, title, price }) => `
     <li id="${getItemId(id)}" class="item-card">
@@ -17,13 +17,16 @@ const itemTemplate = ({ id, title, price }) => `
         alt="card image"
         />
         <div class="card-body">
-            <h5 class="card-title">${title}</h5>
-            <p class="card-paragraph">${price}</p>
+            <div>
+                <h5 class="card-title">${title}</h5>
+                <p class="card-paragraph">${price}</p>
+            </div>
         </div>
     </li>
 `
 
 // exposed functions
+
 export const clearInputs = () => {
     titleInput.value = "";
     priceInput.value = "";

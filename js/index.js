@@ -12,6 +12,12 @@ const findInput = document.getElementById("find_input");
 const itemsCounter = document.getElementById("items_counter");
 const itemsSortASC = document.getElementById("sort_items_asc");
 const itemsSortDESC = document.getElementById("sort_items_desc");
+const titleInput = document.getElementById("title_input");
+const priceInput = document.getElementById("price_input");
+const errorTitle = document.getElementById("errorTitle");
+const errorPrice = document.getElementById("errorPrice");
+const errorFind = document.getElementById("errorFind");
+
 
 let devices = [];
 
@@ -32,7 +38,7 @@ itemsSortDESC.addEventListener("click", (event) => {
 });
 
 const addItem = ({ title, price }) => {
-    const generatedId = () => Math.random().toString(36).substr(2, 9);
+    const generatedId = Math.random().toString(36).substr(2, 9);
 
     const newItem = {
         id: generatedId,
@@ -49,25 +55,43 @@ submitButton.addEventListener("click", (event) => {
     // Prevents default page reload on submit
     event.preventDefault();
 
-    const { title, price } = getInputValues();
+    if(titleInput.value == 0) {
+        errorTitle.textContent = "Please enter a title";
+    } else if(priceInput.value <= 0) {
+        errorPrice.textContent = "Please enter a valid number";
+    } else if(isNaN(priceInput.value)) {
+        errorTitle.textContent = "";
+        errorPrice.textContent = "Please enter a valid number";
+    } else {
+        const { title, price } = getInputValues();
 
-    clearInputs();
+        clearInputs();
 
-    addItem({
-        title,
-        price: price,
-    });
+        addItem({
+            title,
+            price: price,
+        });
+
+        errorPrice.textContent = "";
+        errorTitle.textContent = "";
+    }
 
 });
 
 findButton.addEventListener("click", (event) => {
     event.preventDefault();
-    const foundDevices = devices
+    if(findInput.value == 0) {
+        errorFind.textContent = "What you want to find?"
+    } else {
+        const foundDevices = devices
         .filter(d => d.title.search(findInput.value) !== -1);
     
     itemsCounter.innerHTML = `${foundDevices.length}`;
 
+    errorFind.textContent = ""; 
+
     renderItemsList(foundDevices);
+    }
 });
 
 cancelFindButton.addEventListener("click", (event) => {

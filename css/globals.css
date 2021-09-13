@@ -36,6 +36,12 @@ legend {
 
 button {
   font-weight: 500;
+  width: 8em;
+  font-size: var(--font-size-md);
+  padding: 0.75rem 0;
+  border: none;
+  border-radius: 0.25rem;
+  color:white;
 }
 
 li {

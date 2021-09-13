@@ -19,17 +19,17 @@
     </header>
     <section class="content container">
       <div class="content__form">
-        <form>
+        <form id="validation">
           <fieldset class="form__create">
             <legend>Create device</legend>
             <p>
               <label for="name">Model</label>
               <input type="text" id="title_input" />
+              <span class="error" id="errorTitle"></span>
             </p>
-            <p>
-              <label for="price">Price</label>
-              <input type="text" id="price_input" />
-            </p>
+            <label for="price">Price</label>
+            <input type="text" id="price_input" class="price" />
+            <span class="error" id="errorPrice"></span>
 
             <button class="form__create-button" id="submit_button">
               Submit
@@ -39,7 +39,10 @@
           <fieldset class="form__find">
             <legend>Find Device</legend>
             <p>Items found: <span id="items_counter"> all </span></p>
-            <p><input type="text" id="find_input" /></p>
+            <p>
+              <input type="text" id="find_input" />
+              <span class="error" id="errorFind"></span>
+            </p>
             <button class="form__find-button" id="find_button">Find</button>
             <button
               class="form__find-button-cancel"
@@ -48,10 +51,8 @@
             >
               Cancel
             </button>
-            <br>
-            <button class="sort_button" id="sort_items_asc">
-              Lower price
-            </button>
+            <br />
+            <button class="sort_button" id="sort_items_asc">Lower price</button>
             <button class="sort_button" id="sort_items_desc">
               Higher price
             </button>

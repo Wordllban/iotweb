@@ -7,6 +7,12 @@
   border-radius: 8px 8px 0 0;
 }
 
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .card-title {
   font-weight: bold;
   font-size: 1.5rem;
@@ -17,6 +23,5 @@
 
 .card-paragraph {
   font-weight: 500;
-  margin-top: 0.25rem;
   margin-left: 0.5rem;
 }
