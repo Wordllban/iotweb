@@ -54,13 +54,22 @@ const addItem = ({ title, price }) => {
 submitButton.addEventListener("click", (event) => {
     // Prevents default page reload on submit
     event.preventDefault();
+    // №<>/#!~&$@
+    const invaidSymbols = ["№", "<", ">", "/", "|", "\\", "#", "!", "~", "&", "$", "@", ";", ".", "?", "%", "*", "₴", "`"];
 
     if(titleInput.value == 0) {
         errorTitle.textContent = "Please enter a title";
+    } else if(invaidSymbols.some(symbol => titleInput.value.includes(symbol))) {
+        errorTitle.textContent = "Wrong symbols";
+    } else if(priceInput.value.includes("&nbsp;") || priceInput.value.includes("&nbsp")) {
+        errorPrice.textContent = "Anti-denys defence";
+    } else if(typeof parseFloat(priceInput.value) != 'number') {
+        errorPrice.textContent = "Please enter a valid numberrr";
+    } else if(invaidSymbols.some(symbol => priceInput.value.includes(symbol)))  {
+        errorPrice.textContent = "Wrong symbols";
+    } else if(priceInput.value.search(/[A-Za-z]/) != -1) {
+        errorPrice.textContent = "Wrong symbols";
     } else if(priceInput.value <= 0) {
-        errorPrice.textContent = "Please enter a valid number";
-    } else if(isNaN(priceInput.value)) {
-        errorTitle.textContent = "";
         errorPrice.textContent = "Please enter a valid number";
     } else {
         const { title, price } = getInputValues();
@@ -69,7 +78,7 @@ submitButton.addEventListener("click", (event) => {
 
         addItem({
             title,
-            price: price,
+            price: price.replace(',', '.'),
         });
 
         errorPrice.textContent = "";
