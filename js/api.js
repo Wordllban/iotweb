@@ -28,7 +28,7 @@ export const getData = () => {
     })
     .catch(err => {
     console.log(err, err.response);})
-
+    
     return allDevices;
 };
 

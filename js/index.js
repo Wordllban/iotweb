@@ -55,18 +55,18 @@ export const refetchAllItems = () => {
 };
 
 const findItems = (items) => {
-    const foundItems = items[0].filter((items) => items.model.search(findInput.value) !== -1);
+    const foundItems = items[0].filter(d => d.title.search(findInput.value) !== -1);
     return foundItems;
 };
 
 const sortItemsASC = (items) => {
-    const sortedItems = items.sort((a, b) => (a.price > b.price) ? 1 : -1);
-    renderItemsList(sortedItems);
+    const sortedItems = items[0].sort((a, b) => (a.price > b.price) ? 1 : -1);
+    return sortedItems;
 }
 
 const sortItemsDESC = (items) => {
-    const sortedItems = items.sort((a, b) => (a.price < b.price) ? 1 : -1);
-    renderItemsList(sortedItems);
+    const sortedItems = items[0].sort((a, b) => (a.price < b.price) ? 1 : -1);
+    return sortedItems;
 }
 
 export const clearInputs = () => {
