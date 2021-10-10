@@ -26,8 +26,11 @@ const cancelFindButton = document.getElementById("cancel_find_button");
 const findInput = document.getElementById("find_input");
 const sortButtonASC = document.getElementById("sort_button_asc");
 const sortButtonDESC = document.getElementById("sort_button_desc");
+const countButton = document.getElementById("count_button");
 const priceInput = document.getElementById("price_input");
-const error_message = document.getElementById("message");
+const errorMessageInput = document.getElementById("input_message");
+const errorMessageFind = document.getElementById("find_message");
+const deviceCounter = document.getElementById("counter");
 
 export let allDevices = [];
 
@@ -55,7 +58,7 @@ export const refetchAllItems = () => {
 };
 
 const findItems = (items) => {
-    const foundItems = items[0].filter(d => d.title.search(findInput.value) !== -1);
+    const foundItems = items[0].filter(d => d.model.search(findInput.value) !== -1);
     return foundItems;
 };
 
@@ -76,6 +79,7 @@ export const clearInputs = () => {
 cancelFindButton.addEventListener("click", () => {
     refetchAllItems(allDevices);
     clearInputs();
+    errorMessageFind.style.display = "none"
 })
 
 submitInputs.addEventListener('click', (event) => {
@@ -94,31 +98,37 @@ sortButtonDESC.addEventListener('click', (event) => {
     renderItemsList(sortItemsDESC(allDevices));
 });
 
+countButton.addEventListener("click", (event) => {
+    event.preventDefault(); 
+    deviceCounter.textContent = `Total amount of devices: ${allDevices[0].length}`;
+})
+
+
 findButton.addEventListener("click", () => {
-    renderItemsList(findItems(allDevices));
-    clearInputs();
+    errorMessageFind.style.padding = "10px";
+
+    if (findInput.value == 0) {
+        errorMessageFind.textContent = "What you want to find?"
+    } else {
+        renderItemsList(findItems(allDevices));
+        clearInputs();
+        errorMessageFind.style.display = "none"
+    }
 });
 
-/* countButton.addEventListener('click', (event) => {
-    event.preventDefault();
-    document.getElementById("counter").innerHTML = countMins(allDevices);
-    console.log(countMins(allDevices));
-}); */
-
 const validate = () => {
-    error_message.style.padding = "10px";
-    var text;
+    errorMessageInput.style.padding = "10px";
 
-    if(nameInput.value.length < 3){
-        text = "Please Enter valid Name";
-        error_message.innerHTML = text;
+    if (nameInput.value.length < 3){
+        errorMessageInput.textContent = "Please Enter valid Model";
+    } else if (priceInput.value == 0){
+        errorMessageInput.textContent = "Please Enter valid Price";
         return false;
-    } else if(priceInput.value.length == 0){
-        text = "Please Enter valid Price";
-        error_message.innerHTML = text;
+    } else if (priceInput.value < 0) {
+        errorMessageInput.textContent = "Please Enter valid Price";
         return false;
-    } else{
-        error_message.style.display = "none";
+    } else { 
+        errorMessageInput.style.display = "none";
         return true;
     }
 }

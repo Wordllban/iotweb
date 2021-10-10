@@ -33,7 +33,7 @@
                     <form id="add_form" class="bg-light">
                         <h3 class="mb-3">Add your device</h3>
                         <div class="mb-3">
-                        <div id="message"></div>
+                        <div id="input_message" class="message"></div>
                         <div class="mb-3">
                             <label for="exampleInputName" class="form-label">Model</label>
                             <input type="text" class="form-control" id="name_input" name="model" />
@@ -49,6 +49,7 @@
         
                 <div class="mt-5">
                     <h4 class="mb-3">Find devices</h4>
+                    <div id="find_message" class="message"></div>
                     <input id="find_input" type="text" class="form-control" />
                     <button id="find_button" type="button" class="btn btn-outline-dark mt-4">
                         Find
@@ -62,18 +63,17 @@
             <div class="mt-5">
                 <h4 class="mb-3">Filter devices</h4>
                 <button id="sort_button_asc" type="button" class="btn btn-dark mt-4">
-                    Sort by lower price
-                </button>
-                <button id="sort_button_desc" type="button" class="btn btn-dark mt-4">
                     Sort by higher price
                 </button>
-                <div class="card-body">
-                    Total amount of devices: 
-                <div id="counter" class="mb-3">
-                    
-                </div>
-                </div>
-                
+                <button id="sort_button_desc" type="button" class="btn btn-dark mt-4">
+                    Sort by lower price
+                </button>
+                <p>
+                    <button id="count_button" type="button" class="btn btn-dark mt-4">
+                        Count amout of devices
+                    </button>
+                    <p id="counter">Total amount of devices: 0 </p>
+                </p>
                 </div>
             </div>
         

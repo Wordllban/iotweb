@@ -12,8 +12,8 @@ import {
 } from "./templates.js"
 
 axios.defaults.baseURL = "http://localhost:3000/api/v1/devices"
-/* axios.defaults.headers.put['Accept'] = "'content-Type': 'multipart/form-data;  boundary=----abcdefg'"  
-axios.defaults.headers.post['Accept'] = "'content-Type': 'multipart/form-data;  boundary=----abcdefg' " */
+axios.defaults.headers.put['Accept'] = "'content-Type': 'multipart/form-data;  boundary=----abcdefg'"  
+axios.defaults.headers.post['Accept'] = "'content-Type': 'multipart/form-data;  boundary=----abcdefg' "
 
 export const getData = () => {
     axios
@@ -28,7 +28,7 @@ export const getData = () => {
     })
     .catch(err => {
     console.log(err, err.response);})
-    
+
     return allDevices;
 };
 
