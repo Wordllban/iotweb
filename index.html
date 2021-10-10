@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>crud web app</title>
+    
+        <link rel="stylesheet" href="style.css">
+    
+        <!-- Bootstrap 5 -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+            integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+            integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+            crossorigin="anonymous"
+        ></script>
+    
+        <!-- UUID library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js"></script>
+        </head>
+        <body class="bg-light">
+            <div class="container p-3">
+                <div class="row mb-3">
+                    <h1 class="text-center">Devices store</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mt-2">
+                    <form id="add_form" class="bg-light">
+                        <h3 class="mb-3">Add your device</h3>
+                        <div class="mb-3">
+                        <div id="input_message" class="message"></div>
+                        <div class="mb-3">
+                            <label for="exampleInputName" class="form-label">Model</label>
+                            <input type="text" class="form-control" id="name_input" name="model" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPrice" class="form-label">Price</label>
+                            <input type="number" class="form-control" id="price_input" name="price"/>
+                        </div>
+                        <button id="submit_button" type="submit" class="btn btn-outline-dark">
+                            Submit
+                        </button>
+                    </form>
+        
+                <div class="mt-5">
+                    <h4 class="mb-3">Find devices</h4>
+                    <div id="find_message" class="message"></div>
+                    <input id="find_input" type="text" class="form-control" />
+                    <button id="find_button" type="button" class="btn btn-outline-dark mt-4">
+                        Find
+                    </button>
+                    <button id="cancel_find_button" type="button" class="btn btn-dark mt-4">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        
+            <div class="mt-5">
+                <h4 class="mb-3">Filter devices</h4>
+                <button id="sort_button_asc" type="button" class="btn btn-dark mt-4">
+                    Sort by higher price
+                </button>
+                <button id="sort_button_desc" type="button" class="btn btn-dark mt-4">
+                    Sort by lower price
+                </button>
+                <p>
+                    <button id="count_button" type="button" class="btn btn-dark mt-4">
+                        Count amout of devices
+                    </button>
+                    <p id="counter">Total amount of devices: 0 </p>
+                </p>
+                </div>
+            </div>
+        
+            
+                <ul id="itemsContainer" class="col-md-4 mt-5 mt-md-2 mx-auto">
+                </ul>
+        
+                <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+                <script src="./js/index.js" type="module"></script>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        </body>
+</html>
