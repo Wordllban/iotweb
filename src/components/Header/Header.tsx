@@ -6,11 +6,13 @@ export const Header = () => {
     return (
         <header className={styles.header}>
             <Logo />
-            <div>
-                <HeaderItem label="Home" path="/home"/>
-                <HeaderItem label="Catalog" path="/catalog"/>
-                <HeaderItem label="Cart" path="/cart"/>
-            </div>
+            <nav>
+                <div>
+                    <HeaderItem label="Home" path="/home"/>
+                    <HeaderItem label="Catalog" path="/catalog"/>
+                    <HeaderItem label="Cart" path="/cart"/>
+                </div>
+            </nav>
         </header>
     );
 };
