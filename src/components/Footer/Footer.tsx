@@ -20,6 +20,11 @@ export const Footer = () => {
                     <img src={instagram} alt="instagram" style={{width: '45px', height: '45px'}} />
                 </div>
             </div>
+            <div className={styles.rights}>
+                <p>
+                    2021 IoT LPNU © All rights reserved (no)
+                </p>
+            </div>
         </footer>
     )
 }
