@@ -1,28 +1,27 @@
 @import "../../typography/colors.scss";
 
 .item {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
 .image {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 425px;
+  max-height: 425px;
   text-align: center;
 }
 
 .itemName {
-    display: inline-block;
-    border-bottom: solid $drak-grey;
-    transition: 1s;
+  display: inline-block;
+  border-bottom: solid $drak-grey;
+  transition: 1s;
 }
 
 .item:hover .itemName {
-    border-bottom: solid $sea;
-    margin-bottom: 0;
+  border-bottom: solid $sea;
+  margin-bottom: 0;
 }

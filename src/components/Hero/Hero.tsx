@@ -11,9 +11,9 @@ export const Hero = () => {
                 <h2 className={styles.heroName}>Arduino Nano</h2>
                 <p className={styles.about}>
                     <span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quaerat eaque vero adipisci accusamus ea sapiente repellat dicta temporibus officiis. 
-                        Necessitatibus vero odio tenetur modi maiores libero a earum quaerat veritatis.
+                        Built on the Arduino Nano 3.0 or Arduino Nano 2.x microcontroller,
+                        is small in size and can be used in laboratory work.
+                        It has similar functionality to the Arduino Duemilanove, but differs in assembly.
                     </span>
                     <br />
                     <span className={styles.more}>
