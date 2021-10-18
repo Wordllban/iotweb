@@ -10,6 +10,7 @@ import { Content } from "./components/Content/Content";
 
 // styles
 import styles from './App.scss';
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Header />
         <Hero />
         <Content />
+        <Footer />
       </Router>
     </div>
   );
