@@ -12,3 +12,6 @@ export const Button = (props: ButtonProps) => {
     )
 }
 
+//
+// will be updated with useState to become more flexable 
+// 
