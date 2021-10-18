@@ -4,13 +4,13 @@ import { HeaderItem } from "./HeaderItem";
 
 export const Header = () => {
     return (
-        <div className={styles.header}>
+        <header className={styles.header}>
             <Logo />
             <div>
                 <HeaderItem label="Home" path="/home"/>
                 <HeaderItem label="Catalog" path="/catalog"/>
                 <HeaderItem label="Cart" path="/cart"/>
             </div>
-        </div>
+        </header>
     );
 };
