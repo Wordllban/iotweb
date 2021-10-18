@@ -1,0 +1,20 @@
+@import "../../typography/colors.scss";
+
+.heroImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImage img {
+  max-width: 80%;
+  max-height: 100%;
+  transition: 0.5s ease-out;
+  border: 1px solid $drak-grey;
+  border-radius: 5%;
+}
+
+.heroImage img:hover {
+  border: 1px solid $sea;
+  border-radius: 0%;
+}

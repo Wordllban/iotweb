@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./HeaderItem.module.scss";
 
 interface HeaderItemProps {
