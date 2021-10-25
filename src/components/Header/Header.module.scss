@@ -8,3 +8,13 @@
   padding-bottom: 1rem;
   border-bottom: solid $grey;
 }
+
+.nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.nav > :not(:last-child) {
+  margin-right: 4rem;
+}

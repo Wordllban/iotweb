@@ -8,8 +8,10 @@ interface HeaderItemProps {
 
 export const HeaderItem = (props: HeaderItemProps) => {
     return (
-        <Link className={styles.headerItem} to={props.path}>
-        {props.label}
-        </Link>
+        <li>
+            <Link className={styles.headerItem} to={props.path}>
+                {props.label}
+            </Link>
+        </li>
     )
 }

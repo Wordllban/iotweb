@@ -7,11 +7,11 @@ export const Header = () => {
         <header className={styles.header}>
             <Logo />
             <nav>
-                <div>
+                <ul className={styles.nav}>
                     <HeaderItem label="Home" path="/home"/>
                     <HeaderItem label="Catalog" path="/catalog"/>
                     <HeaderItem label="Cart" path="/cart"/>
-                </div>
+                </ul>
             </nav>
         </header>
     );
