@@ -47,7 +47,7 @@ export const Catalog = () => {
         <div className={styles.itemList}>
             <div className={styles.filter}>
                 <div className={styles.filterTitle}>
-                    <input className={styles.textInput} type="text" name="search item" placeholder="Search pusska" value={query} onChange={inputHandler}/>
+                    <input className={styles.textInput} type="text" name="search item" placeholder="Search device" value={query} onChange={inputHandler}/>
                     <button className={styles.searchButton} onClick={search}>Search</button>
                 </div>
 

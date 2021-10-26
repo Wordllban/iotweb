@@ -5,7 +5,6 @@
 }
 
 .slider[type="range"]::-webkit-slider-runnable-track {
-  
   height: 0.75em;
   background: $grey;
   border: none;
@@ -24,8 +23,8 @@
 }
 
 .sliderPrice {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
