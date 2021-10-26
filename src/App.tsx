@@ -8,11 +8,11 @@ import {
 import { Header } from './components/Header/Header';
 import { Hero } from "./components/Hero/Hero";
 import { Content } from "./components/Content/Content";
-import { Catalog } from "./components/Catalog/Catalog";
 
 // styles
 import styles from './App.scss';
 import { Footer } from "./components/Footer/Footer";
+import { Catalog } from "./components/Catalog/Catalog";
 
 function App() {
   return (

@@ -1,0 +1,31 @@
+@import "../../typography/colors.scss";
+
+.slider[type="range"] {
+  -webkit-appearance: none;
+}
+
+.slider[type="range"]::-webkit-slider-runnable-track {
+  
+  height: 0.75em;
+  background: $grey;
+  border: none;
+  border-radius: 3px;
+}
+
+.slider[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  color: $grey;
+  border: solid $grey;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  background: $dark-grey;
+  margin-top: -0.65em;
+}
+
+.sliderPrice {
+    display: flex;
+    align-items: center;
+
+    font-size: 1.25rem;
+}

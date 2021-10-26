@@ -16,8 +16,8 @@ export const Slider = (props: sliderProps) => {
 
     return (
         <>
-            <input className={styles.slider} type="range" step={props.step} min={props.min} max={props.max} value={inputValue.value} onChange={handleChange}/>
-            <p className={styles.sliderPrice}>Search item from price: {inputValue.value} $</p>
+            <input style={{ backgroundColor: "#202020", width: "400px"}} className={styles.slider} type="range" step={props.step} min={props.min} max={props.max} value={inputValue.value} onChange={handleChange}/>
+            <span className={styles.sliderPrice}>Search item from price: {inputValue.value} $</span>
         </>
     )
 }
