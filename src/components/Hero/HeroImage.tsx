@@ -4,7 +4,7 @@ import styles from "./HeroImage.module.scss";
 export const HeroImage = () => {
     return (
         <div className={styles.heroImage}>
-            <img src={logoImage} alt="hero image"/>
+            <img src={logoImage} alt="hero"/>
         </div>
     );
 };

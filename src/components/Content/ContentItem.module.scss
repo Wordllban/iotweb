@@ -9,7 +9,7 @@
   flex-direction: column;
 }
 
-.image {
+.contentImage {
   max-width: 425px;
   max-height: 425px;
   text-align: center;
@@ -17,7 +17,7 @@
 
 .itemName {
   display: inline-block;
-  border-bottom: solid $drak-grey;
+  border-bottom: solid $dark-grey;
   transition: 1s;
 }
 
