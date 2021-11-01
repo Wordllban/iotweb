@@ -14,7 +14,7 @@ export const ContentItem = (props: ContentItemProps) => {
             </div>
             <div>
                 <h3 className={styles.itemName}>{props.label}</h3>
-                <p>
+                <p className={styles.description}>
                     {props.content}
                 </p>
             </div>  

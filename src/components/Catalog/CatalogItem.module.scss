@@ -1,6 +1,6 @@
 @import "../../typography/colors.scss";
 
-.catalogItem {
+.catalog__item {
   background-color: $grey;
   padding: 1rem 1rem 0 1rem;
   border: 2px solid $grey;
@@ -10,7 +10,7 @@
   max-height: 410px;
 }
 
-.itemTitle {
+.item_title {
   display: inline-block;
   font-size: 1.75em;
   transition: 0.3s ease-in;
@@ -19,19 +19,19 @@
   margin-top: 1rem;
 }
 
-.itemImage {
+.item_image {
   max-width: 300px;
   max-height: 300px;
 }
 
 // animations
 
-.catalogItem:hover,
-.catalogItem:focus {
+.catalog__item:hover,
+.catalog__item:focus {
   box-shadow: 0 1.25rem 0.5rem -1rem $sea;
   transform: translateY(-0.25rem);
 }
 
-.catalogItem:hover .itemTitle {
+.catalog__item:hover .item_title {
   border-bottom: solid $sky;
 }

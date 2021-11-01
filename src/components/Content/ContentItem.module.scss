@@ -21,6 +21,10 @@
   transition: 1s;
 }
 
+.description {
+  max-width: 425px;
+}
+
 .item:hover .itemName {
   border-bottom: solid $sea;
   margin-bottom: 0;
