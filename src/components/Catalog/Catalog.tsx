@@ -1,6 +1,5 @@
 import { ChangeEvent, useState } from "react";
 
-import { Slider } from "../Slider/Slider";
 import { CatalogItem } from "./CatalogItem";
 
 import styles from "./Catalog.module.scss";
@@ -22,6 +21,12 @@ const data: dataProps[] = [
     {"id": 8, "title": "item8", "price": 8000},
     {"id": 9, "title": "item9", "price": 9000},
     {"id": 10, "title": "item10", "price": 11000},
+    {"id": 11, "title": "item10", "price": 12000},
+    {"id": 12, "title": "item10", "price": 13000},
+    {"id": 13, "title": "item10", "price": 14000},
+    {"id": 14, "title": "item10", "price": 15000},
+    {"id": 15, "title": "item10", "price": 16000},
+    {"id": 16, "title": "item10", "price": 17000},
 ]
 
 // render item list
@@ -61,6 +66,16 @@ export const Catalog = () => {
         setResult(foundItems)
     }
 
+    // show more
+    const [showMore, setShowMore] = useState(true);
+    const [count, setCount] = useState(8);
+
+    const showMoreButton = () => {
+        setCount(count + 8);
+        const newShowMore = count < 8;                
+        setShowMore(newShowMore)
+    }
+
     return (
         <div className={styles.item_list}>
             <div className={styles.filter}>
@@ -75,17 +90,23 @@ export const Catalog = () => {
                     <button className={styles.search_price} onClick={searchByPrice}>Search</button>
                 </div>
             </div>
-
+                
             <div className={styles.wrapper}>
                 {result && result.length > 0 ? (
-                    result.map( item => <CatalogItem key={item.id} title={item.title} price={item.price}/>)
+                    [...result.slice(0, count)].map( item => <CatalogItem key={item.id} title={item.title} price={item.price}/>)
                 ) : !result ? ( 
-                    data.map( (item) => <CatalogItem key={item.id} title={item.title} price={item.price}/>)
+                    [...data.slice(0, count)].map( item => <CatalogItem key={item.id} title={item.title} price={item.price}/>)
                 ) : (
                     <h2>No Items Found</h2>
                 )}
             </div>
+                
+            <div className={styles.button__container}>
+                { showMore
+                    &&
+                <button className={styles.view_more_button} name="view more button" onClick={showMoreButton}>View More</button>
+                }
+            </div>
         </div>
     )
 }
-

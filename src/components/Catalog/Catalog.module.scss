@@ -98,6 +98,23 @@
   font-size: 1.25rem;
 }
 
+.button__container {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 2rem;
+}
+
+.view_more_button {
+  display: flex;
+  justify-content: center;
+  background: none;
+  border: 2px solid;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0.25em 0.5em;
+}
+
 // animations
 
 .search_title:focus,
@@ -123,4 +140,22 @@
 .slider:hover,
 .slider:focus {
   opacity: 1;
+}
+
+.view_more_button {
+  color: $sea;
+  transition: 0.8s;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    border-radius: 100px;
+  }
+}
+
+.view_more_button:hover,
+.view_more_button:focus {
+  box-shadow: 0 -0.2em 0.5em 0.1em $sea;
+  border-color: $sea;
+  transform: translateY(0.25em);
 }
