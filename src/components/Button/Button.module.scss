@@ -7,7 +7,7 @@
   font-size: 2rem;
   line-height: 1;
   text-align: center;
-  padding: 0.25em 0.5em;
+  padding: 0.25rem 0.5rem;
 }
 
 // animation
@@ -16,14 +16,14 @@
   transition: 0.8s;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     color: #fff;
     border-radius: 100px;
   }
 }
 
 .button:hover,
-.button:focus {
+.button:focus-visible {
   box-shadow: 0 0.5em 0.5em -0.4em $sea;
   border-color: $sea;
   transform: translateX(0.25em);

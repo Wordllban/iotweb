@@ -1,16 +1,21 @@
 @import "../../typography/colors.scss";
 
-.catalog__item {
+.item {
   background-color: $grey;
   padding: 1rem 1rem 0 1rem;
   border: 2px solid $grey;
   border-radius: 0.5rem;
   transition: 0.3s ease-in;
   max-width: 300px;
-  max-height: 410px;
+  max-height: 440px;
 }
 
-.item_title {
+.image {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.title {
   display: inline-block;
   font-size: 1.75em;
   transition: 0.3s ease-in;
@@ -19,19 +24,49 @@
   margin-top: 1rem;
 }
 
-.item_image {
-  max-width: 300px;
-  max-height: 300px;
+.price {
+  margin-bottom: 1rem;
+}
+
+.view_more {
+  float: right;
+  margin-bottom: 1.25rem;
+}
+
+.view_more_button {
+  text-decoration: none;
+  background: none;
+  border: 2px solid;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  padding: 0.25rem 0.5rem;
 }
 
 // animations
 
-.catalog__item:hover,
-.catalog__item:focus {
+.item:hover,
+.item:focus {
   box-shadow: 0 1.25rem 0.5rem -1rem $sea;
-  transform: translateY(-0.25rem);
 }
 
-.catalog__item:hover .item_title {
+.item:hover .item_title {
   border-bottom: solid $sky;
+}
+
+.view_more_button {
+  color: $sea;
+  transition: 0.8s;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    border-radius: 0.5rem;
+  }
+}
+
+.view_more_button:hover,
+.view_more_button:focus {
+  border-color: $sea;
 }
