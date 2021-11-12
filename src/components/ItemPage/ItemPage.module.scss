@@ -1,0 +1,31 @@
+.item__page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 2rem;
+}
+
+.image {
+  max-width: 650px;
+  max-height: 650px;
+}
+
+.description {
+  text-align: right;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.about {
+  padding-left: 25%;  
+  width: 75%;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+}

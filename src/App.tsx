@@ -8,7 +8,7 @@ import {
 import { Header } from './components/Header/Header';
 import { Hero } from "./components/Hero/Hero";
 import { Content } from "./components/Content/Content";
-import Catalog, { data } from "./components/Catalog/Catalog";
+import Catalog from "./components/Catalog/Catalog";
 import { ItemPage } from "./components/ItemPage/ItemPage";
 import { Footer } from "./components/Footer/Footer";
 
@@ -30,11 +30,11 @@ function App() {
           </Route>
 
           <Route exact path="/catalog">
-              <Catalog />
+            <Catalog />
           </Route>
 
           <Route exact path='/catalog/info/:id'>
-            <ItemPage data={data}/>
+            <ItemPage />
           </Route>
 
           <Route exact path="/cart">

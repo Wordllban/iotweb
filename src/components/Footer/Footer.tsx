@@ -10,7 +10,7 @@ import instagram from "../../assets/instagram-white.png"
 
 export const Footer = () => {
     return (
-        <footer>
+        <footer className={styles.container}>
             <div className={styles.footer}>
                 <Logo />
                 <div className={styles.media}>
@@ -22,7 +22,7 @@ export const Footer = () => {
             </div>
             <div className={styles.rights}>
                 <p>
-                    2021 IoT LPNU © All rights reserved (no)
+                    2021 IoT LPNU © All rights reserved (нє)
                 </p>
             </div>
         </footer>

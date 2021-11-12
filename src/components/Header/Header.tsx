@@ -1,12 +1,8 @@
 import styles from "./Header.module.scss";
 import { Logo } from "../Logo/Logo";
 import { HeaderItem } from "./HeaderItem";
-import { useHistory } from "react-router";
 
-export const Header = () => {
-    let history = useHistory();
-    console.log(history);
-    
+export const Header = () => {    
     return (
         <header className={styles.header}>
             <Logo />
