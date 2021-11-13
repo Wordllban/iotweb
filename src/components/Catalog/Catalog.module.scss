@@ -29,37 +29,8 @@
   background-color: $grey;
   outline: none;
   border: 1px solid $grey;
-  border-radius: 100px 0 0 100px;
+  border-radius: 100px;
   transition: 0.3s ease-in-out;
-}
-
-.search_title {
-  font-size: 1.5rem;
-  padding: 0.5rem 1rem;
-  background-color: $grey;
-  color: white;
-  border: 1px solid $grey;
-  border-left: 2px solid $dark-grey;
-  border-radius: 0 100px 100px 0;
-  outline: none;
-  transition: 0.3s ease-in;
-}
-
-.filter__price {
-  width: 850px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.search_price {
-  font-size: 1.5rem;
-  padding: 0.5rem 1rem;
-  background-color: $grey;
-  color: white;
-  border: 2px solid $grey;
-  border-radius: 100px 100px 100px 100px;
-  outline: none;
-  transition: 0.3s ease-in;
 }
 
 .wrapper {
