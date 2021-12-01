@@ -1,24 +1,24 @@
 import React from 'react'
-import { useAppDispatch, useAppSelector } from '../../hooks/redux.store.hooks'
-import { getCartProducts, getTotalPrice, removeFromCart } from './cart.slice'
+import { useAppSelector } from '../../hooks/redux.store.hooks'
+import { getCartProducts, getTotalPrice } from './cart.slice'
 import { CartItem } from './CartItem';
 
-interface CartProps {
+import styles from "./Cart.module.scss";
 
-}
-
-export const Cart: React.FC<CartProps> = ({}) => {
+export const Cart: React.FC = () => {
     const totalPrice = useAppSelector(getTotalPrice);
     const cartProducts = useAppSelector(getCartProducts);
 
-    console.log('cart products: ', cartProducts);
-    
-
     return (
-        <div>
-            <h2>Cart</h2>
-            <h5>{totalPrice} $</h5>
-            {cartProducts.map(product => <CartItem key={product.id} id={product.id} model={product.model} amount={product.amount}/>)}
+        <div className={styles.cart}>
+            <h1 className={styles.title}>Cart</h1>
+            <div className={styles.items_container}>
+                {cartProducts.map(product => <CartItem key={product.id} id={product.id} model={product.model} price={product.price} amount={product.amount}/>)}
+            </div>
+            <div className={styles.order}>
+                <h5 className={styles.price}>Total price: {totalPrice} $</h5>
+                <button className={styles.button}>Make order</button>
+            </div>
         </div>
     );
 }

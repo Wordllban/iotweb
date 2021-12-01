@@ -11,7 +11,7 @@ const cartSlice = createSlice({
     initialState: [] as cartProduct[],
     reducers: {
         addToCart: (state, action: PayloadAction<dataProps>) => {            
-            let productIndex = state.findIndex(product => product.id == action.payload.id)            
+            let productIndex = state.findIndex(product => product.id === action.payload.id)            
             if(productIndex !== -1) {
                 state[productIndex].amount += 1;
             } else {
@@ -19,7 +19,7 @@ const cartSlice = createSlice({
             }
         },
         removeFromCart: (state, action: PayloadAction<string | number>) => {
-            let productIndex = state.findIndex(product => product.id == action.payload)
+            let productIndex = state.findIndex(product => product.id === action.payload)
             if(state[productIndex].amount > 1) {
                 state[productIndex].amount -= 1;
             } else {

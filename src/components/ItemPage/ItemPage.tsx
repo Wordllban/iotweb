@@ -28,7 +28,7 @@ export const ItemPage = () => {
             ) : (
                 <div className={styles.item__page}>
                 <div className={styles.image__container}>
-                    <img className={styles.image} src="https://images.unsplash.com/photo-1555543451-eeaff357e0f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1189&q=80"  /* {item.image}  */
+                    <img className={styles.image} src="https://images.unsplash.com/photo-1555543451-eeaff357e0f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1189&q=80"
                         alt="device"/>
                 </div>
                 <div className={styles.description}>
