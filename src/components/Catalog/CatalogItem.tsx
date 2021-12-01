@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import styles from "./CatalogItem.module.scss";
+
+import { AddToCartButton } from "./AddToCartButton";
 import { ItemInfoButton } from "./ItemInfoButton";
+
 interface CatalogItemProps {
     id: number | string;
     title: string;
@@ -17,6 +20,7 @@ export const CatalogItem = (props: CatalogItemProps) => {
 
             <p className={styles.price}>{props.price}</p>
             <p className={styles.view_more}>
+                <AddToCartButton id={props.id} title={props.title} price={props.price}/>
                 <ItemInfoButton itemId={props.id}/>
             </p>
         </div>

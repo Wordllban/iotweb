@@ -15,12 +15,10 @@ export const ItemPage = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        (async () => {
-            setTimeout( async () => {
-                setLoading(false)
-                setItem(await getById(id));
-            }, 300)
-        })()
+        setTimeout( async () => {
+            setLoading(false)
+            setItem(await getById(id));
+        }, 300)
     }, [id])
 
     return (

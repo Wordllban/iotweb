@@ -13,7 +13,7 @@ export interface dataProps {
     price: number;
 }
 
-const Catalog = () => {
+const Catalog = () => {    
     // items
     const [items, setItems] = useState<dataProps[]>();
     // search item
@@ -24,13 +24,10 @@ const Catalog = () => {
     
     
     useEffect(() => {
-        (async () => {
-            setLoading(true);
-            setTimeout( async () => {
-                setItems( await getFilteredData(titleFilter, priceFilter));
-                setLoading(false);
-            }, 300)
-        })()
+        setTimeout( async () => {
+            setItems( await getFilteredData(titleFilter, priceFilter));
+            setLoading(false);
+        }, 300)
     }, [priceFilter, titleFilter])
 
     // search by title
@@ -58,7 +55,7 @@ const Catalog = () => {
         setCount(count + 8);
         const newShowMore = count < 8;                
         setShowMore(newShowMore)
-    }
+    }    
 
     return (
         <div className={styles.item_list}>               
@@ -75,23 +72,30 @@ const Catalog = () => {
                 </div>
 
                 <div className={styles.wrapper}>                      
-                                { loading ? (
-                                    <Loader />
-                                ) : (
-                                items?.length ? ( 
-                                    [...items.slice(0, count)].map( item => <CatalogItem key={item.id} id={item.id} title={item.model} price={item.price}/>)
-                                ) : (
-                                    <h2>No Items Found</h2>
-                                    )
+                        { loading ? (
+                                <Loader />
+                            ) : (
+                            items ? ( 
+                                [...items.slice(0, count)].map( item => <CatalogItem key={item.id} id={item.id} title={item.model} price={item.price}/>)
+                            ) : (
+                                <h2>No Items Found</h2>
                                 )
+                            )
                             
-                            }
+                        }
                 </div>
                     
                 <div className={styles.button__container}>
-                    { showMore
-                        &&
-                    <button className={styles.view_more_button} name="view more button" onClick={showMoreButton}>View More</button>
+                    { showMore ? (
+                        items && items?.length > 4 ? (
+                            <button className={styles.view_more_button} name="view more button" onClick={showMoreButton}>View More</button>
+                        ) : (
+                            <button style={{display: "none"}} className={styles.view_more_button} name="view more button" onClick={showMoreButton}>View More</button>
+                        )
+                    ) : (
+                        <button style={{display: "none"}} className={styles.view_more_button} name="view more button" onClick={showMoreButton}>View More</button>
+                    )
+                        
                     }
                 </div>
         </div>
