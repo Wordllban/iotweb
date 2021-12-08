@@ -36,7 +36,6 @@ import styles from './App.scss';
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
   const [isLog, setIsLog] = useState<boolean>(false)
-  console.log('current url path: ', window.location.href);
   
   useEffect(() => {
     auth.onAuthStateChanged(user => {

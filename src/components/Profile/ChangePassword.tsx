@@ -3,6 +3,8 @@ import PageProps from '../../interfaces/page';
 import { Redirect, useHistory } from 'react-router-dom';
 import { auth } from '../../firebase/firebase';
 
+import styles from "./Input.module.scss";
+
 export const ChangePassword: React.FunctionComponent<PageProps> = (props) => {
     const [changing, setChanging] = useState<boolean>(false);
     const [password, setPassword] = useState<string>('');
@@ -40,11 +42,12 @@ export const ChangePassword: React.FunctionComponent<PageProps> = (props) => {
 
     return (
         <div>
-            <h1>Change password</h1>
-            <form>
+            <h1 className={styles.header}>Change password</h1>
+            <form className={styles.form}>
             <div>
-                    <label htmlFor="oldPassword">Current Password</label>
-                    <input 
+                    <label className={styles.label} htmlFor="oldPassword">Current Password</label>
+                    <input
+                        className={styles.field}
                         autoComplete="new-password"
                         type="password"
                         name="oldPassword"
@@ -56,8 +59,9 @@ export const ChangePassword: React.FunctionComponent<PageProps> = (props) => {
                 </div>
 
                 <div>
-                    <label htmlFor="password">New Password</label>
+                    <label className={styles.label} htmlFor="password">New Password</label>
                     <input 
+                        className={styles.field}
                         autoComplete="new-password"
                         type="password"
                         name="password"
@@ -69,8 +73,9 @@ export const ChangePassword: React.FunctionComponent<PageProps> = (props) => {
                 </div>
 
                 <div>
-                    <label htmlFor="confirm">Confirm new Password</label>
+                    <label className={styles.label} htmlFor="confirm">Confirm new Password</label>
                     <input 
+                        className={styles.field}
                         autoComplete="new-password"
                         type="password"
                         name="confirm"
@@ -82,8 +87,8 @@ export const ChangePassword: React.FunctionComponent<PageProps> = (props) => {
                 </div>
 
                 <button
+                    className={styles.button}
                     disabled={changing}
-                    //color="#5bc0de"
                     style={{display: "block"}}
                     onClick={() => passwordChangeRequest()}
                 >
