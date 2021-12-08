@@ -41,6 +41,14 @@
   color: $sky;
 }
 
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
 .error {
   font-style: italic;
   color: $pink;

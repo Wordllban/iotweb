@@ -35,17 +35,21 @@ import styles from './App.scss';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
-
+  const [isLog, setIsLog] = useState<boolean>(false)
+  console.log('current url path: ', window.location.href);
+  
   useEffect(() => {
     auth.onAuthStateChanged(user => {
       if(user) {
         console.log('user detected');
+        setIsLog(true);
       } else {
         console.log('no user detected');
+        setIsLog(false);
       }
       setLoading(false);
     })
-  }, [])
+  }, [auth])
 
   if(loading) {
     return <Loader />
@@ -54,8 +58,9 @@ function App() {
   return (
     <Provider store={store}>
       <div className={styles.app}>
+
           <Router>
-              <Header />
+              {isLog && <Header />}
             
             <Switch>
               <Route exact path="/register">
@@ -108,12 +113,13 @@ function App() {
                   <Profile />
                 </AuthRoute>
               </Route>
-            </Switch>
 
-            <AuthRoute>
-              <Footer />
-            </AuthRoute>
+            </Switch> 
+
+            {isLog && <Footer />}
+
           </Router>
+          
       </div>
     </Provider>
   );

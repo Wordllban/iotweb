@@ -3,6 +3,8 @@ import { useHistory } from 'react-router-dom'
 import { auth } from '../../firebase/firebase';
 import PageProps from '../../interfaces/page'
 
+import styles from './Input.module.scss';
+
 export const Logout: React.FunctionComponent<PageProps> = () => {
     const history = useHistory();
 
@@ -16,10 +18,10 @@ export const Logout: React.FunctionComponent<PageProps> = () => {
 
     return (
         <div>
-            <h2>Are you sure you want to logout?</h2>
-            <div>
-                <button onClick={() => history.goBack()}>Cancel</button>
-                <button onClick={() => Logout()}>Logout</button>
+            <h2 className={styles.header}>Are you sure you want to logout?</h2>
+            <div className={styles.wrapper}>
+                <button className={styles.button} onClick={() => history.goBack()}>Cancel</button>
+                <button className={styles.button} onClick={() => Logout()}>Logout</button>
             </div>
         </div>
     )

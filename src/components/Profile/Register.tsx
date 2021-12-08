@@ -3,6 +3,8 @@ import PageProps from '../../interfaces/page';
 import { Link, useHistory } from 'react-router-dom';
 import { auth } from '../../firebase/firebase';
 
+import styles from './Input.module.scss';
+
 export const Register: React.FunctionComponent<PageProps> = (props) => {
     const [registering, setRegistering] = useState<boolean>(false);
     const [email, setEmail] = useState<string>('');
@@ -45,11 +47,12 @@ export const Register: React.FunctionComponent<PageProps> = (props) => {
 
     return (
         <div>
-            <h1>Register Page</h1>
-            <form>
+            <h1 className={styles.header}>Register Page</h1>
+            <form className={styles.form}>
                 <div>
-                    <label htmlFor="email">Email</label>
+                    <label className={styles.label} htmlFor="email">Email</label>
                     <input 
+                        className={styles.field}
                         type="email"
                         name="email"
                         id="email"
@@ -60,8 +63,9 @@ export const Register: React.FunctionComponent<PageProps> = (props) => {
                 </div>
 
                 <div>
-                    <label htmlFor="password">Password</label>
+                    <label className={styles.label} htmlFor="password">Password</label>
                     <input 
+                        className={styles.field}
                         autoComplete="new-password"
                         type="password"
                         name="password"
@@ -73,8 +77,9 @@ export const Register: React.FunctionComponent<PageProps> = (props) => {
                 </div>
 
                 <div>
-                    <label htmlFor="confirm">Confirm Password</label>
+                    <label className={styles.label} htmlFor="confirm">Confirm Password</label>
                     <input 
+                        className={styles.field}
                         autoComplete="new-password"
                         type="password"
                         name="confirm"
@@ -86,15 +91,15 @@ export const Register: React.FunctionComponent<PageProps> = (props) => {
                 </div>
 
                 <button
+                    className={styles.button}
                     disabled={registering}
-                    //color="#5bc0de"
                     style={{display: "block"}}
                     onClick={() => signUpWithEmailAndPassword()}
                 >
                     Sign Up
                 </button>
                 <small>
-                    <p>Already have an account? <Link to="/login">Login</Link>.</p>
+                    <p className={styles.is_registered} >Already have an account? <Link className={styles.register_link} to="/login">Login</Link>.</p>
                 </small>
                 <p style={{color: "red"}}>{error}</p>
             </form>
