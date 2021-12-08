@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styles from "./CatalogItem.module.scss";
 
 import { AddToCartButton } from "./AddToCartButton";

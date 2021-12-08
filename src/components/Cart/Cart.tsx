@@ -18,7 +18,7 @@ export const Cart: React.FC = () => {
             ) : (
                 <div className={styles.cart}>
                     <h1 className={styles.title}>Cart</h1>
-                    {cartProducts.length == 0 ? (
+                    {cartProducts.length === 0 ? (
                         <h3>Add something to cart!</h3>
                     ) : (
                         <>

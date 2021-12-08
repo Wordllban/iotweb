@@ -23,7 +23,7 @@ const orderSchema = Yup.object().shape({
         .required('City is Required'),
     street: Yup.string()
         .min(2, 'Too Sort')
-        .required('street is Required')
+        .required('Street is Required')
 });
 
 interface FormModel {
@@ -48,8 +48,8 @@ export const OrderForm = () => {
                 street: "",
             }}
             validationSchema={orderSchema}
-            onSubmit={(values) => {
-                alert(JSON.stringify(values))
+            onSubmit={() => {
+                alert("Successfull order!")
             }}
             >
             {({handleSubmit, errors, touched}) => {
