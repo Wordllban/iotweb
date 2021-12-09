@@ -48,7 +48,7 @@ function App() {
       }
       setLoading(false);
     })
-  }, [auth])
+  }, [])
 
   if(loading) {
     return <Loader />
